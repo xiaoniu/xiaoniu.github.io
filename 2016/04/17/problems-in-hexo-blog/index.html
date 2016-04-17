@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo," />
 
 
 
@@ -82,14 +82,14 @@
 
 <meta name="description" content="前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名niujiajun.com没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&amp;gt;说出来&amp;gt;想出来。
 
-###0x00 不简单的介绍好">
+不简单的介绍好了费话不多说了，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建Hexo博客中碰到的坑">
 <meta property="og:url" content="http://yoursite.com/2016/04/17/problems-in-hexo-blog/index.html">
 <meta property="og:site_name" content="小牛的博客">
 <meta property="og:description" content="前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名niujiajun.com没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&amp;gt;说出来&amp;gt;想出来。
 
-###0x00 不简单的介绍好">
+不简单的介绍好了费话不多说了，">
 <meta property="og:image" content="http://static.zybuluo.com/yiltoncent/24gb14ge265g74tlpmiq3gnt/2.png">
 <meta property="og:image" content="http://niujiajun.com/images/ping.png">
 <meta property="og:image" content="http://niujiajun.com/images/ip-404.png">
@@ -105,12 +105,12 @@
 <meta property="og:image" content="http://niujiajun.com/images/baidu.png">
 <meta property="og:image" content="http://niujiajun.com/images/google.png">
 <meta property="og:image" content="http://niujiajun.com/images/yanzheng.png">
-<meta property="og:updated_time" content="2016-04-17T07:49:50.423Z">
+<meta property="og:updated_time" content="2016-04-17T08:50:42.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建Hexo博客中碰到的坑">
 <meta name="twitter:description" content="前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名niujiajun.com没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&amp;gt;说出来&amp;gt;想出来。
 
-###0x00 不简单的介绍好">
+不简单的介绍好了费话不多说了，">
 <meta name="twitter:image" content="http://static.zybuluo.com/yiltoncent/24gb14ge265g74tlpmiq3gnt/2.png">
 
 
@@ -392,6 +392,25 @@ $(function() {
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/博客搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">博客搭建</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -432,8 +451,9 @@ $(function() {
         <blockquote>
 <p>前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名<code>niujiajun.com</code>没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&gt;说出来&gt;想出来。</p>
 </blockquote>
-<p>###<strong>0x00 不简单的介绍</strong><br>好了费话不多说了，开始复盘博客搭建的整个过程。首先简单介绍一下，我的博客由<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>作为博客框架，<a href="https://github.com/" target="_blank" rel="external">Github</a>提供的300M免费空间作为服务器，<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next</a>作为博客的主题。Next主题中又集成了<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>的评论、分享系统和热评文章功能，<a href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="external">百度统计</a>服务和<a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a>站内搜索服务。<br>反正就是一锅乱炖吧，其实我也不太了解这些功能和服务，就一步步按教程走就好了。整个搭建耗时4天，其实1天就能把基本的东西搭建好，剩下的三天都在处理问题和完善细节。如题，这篇文章的目的并不是讲解如何搭建一个Hexo博客，而是记录我在搭建博客过程中遇到的问题，并给出我的解决方法。</p>
-<p>###<strong>0x01 搭建博客的准备</strong><br>先放几个Windows环境下搭建Hexo博客的教程：</p>
+<h1 id="不简单的介绍"><a href="#不简单的介绍" class="headerlink" title="不简单的介绍"></a>不简单的介绍</h1><p>好了费话不多说了，开始复盘博客搭建的整个过程。首先简单介绍一下，我的博客由<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>作为博客框架，<a href="https://github.com/" target="_blank" rel="external">Github</a>提供的300M免费空间作为服务器，<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next</a>作为博客的主题。Next主题中又集成了<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>的评论、分享系统和热评文章功能，<a href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="external">百度统计</a>服务和<a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a>站内搜索服务。<br>反正就是一锅乱炖吧，其实我也不太了解这些功能和服务，就一步步按教程走就好了。整个搭建耗时4天，其实1天就能把基本的东西搭建好，剩下的三天都在处理问题和完善细节。如题，这篇文章的目的并不是讲解如何搭建一个Hexo博客，而是记录我在搭建博客过程中遇到的问题，并给出我的解决方法。</p>
+<h1 id="搭建博客的准备"><a href="#搭建博客的准备" class="headerlink" title="搭建博客的准备"></a>搭建博客的准备</h1><p>先放几个Windows环境下搭建Hexo博客的教程：</p>
+<blockquote>
 <ul>
 <li><a href="http://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html" target="_blank" rel="external">史上最详细“截图”搭建Hexo博客并部署到Github</a></li>
 <li><a href="http://sunwhut.com/2015/10/30/buildBlog/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">如何利用GitHub Pages和Hexo快速搭建个人博客</a> </li>
@@ -443,10 +463,13 @@ $(function() {
 <li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></li>
 <li><a href="http://huangnx.com/2016/04/01/blogForSearch/" target="_blank" rel="external">Hexo搭建博客之博客搜索引擎推广</a></li>
 </ul>
+</blockquote>
 <p>这类教程网上一搜一大把，这里给的是我觉得写得可以的。还有一个比较作弊一些的自动化搭建工具：</p>
+<blockquote>
 <ul>
 <li><a href="https://project.bitmoe.cn/PortableHexo/" target="_blank" rel="external">HEXO 便携版</a></li>
 </ul>
+</blockquote>
 <p>这个是我快搭好的时候发现的，不喜欢太傻瓜式的，且不想前功尽弃，所以我是没用过的，疗效如何我也不知道。<br>然后如果每个教程都大概看一下的话，可以发现每个教程的步骤不太一样，这就很讨厌了。其实上上周我就尝试过搭建，就是因为看的教程不对，所以刚开始就碰到了问题，于是放弃，拖了两周又重头再来。可见一个好的教程是成功他妈，下面是我看了几篇教程后自己的步骤：</p>
 <blockquote>
 <ul>
@@ -461,40 +484,44 @@ $(function() {
 </ul>
 </blockquote>
 <hr>
-<p>这里要进行注解的是，有的教程会让配置SSH密钥，SSH密钥可以为了防止其他人恶意部署文件到你的仓库，使用以后每次部署文件都需要登录Github账号，可以不配置。<br>有的教程中还会要求下载Github客户端，但我觉得没什么卵用。</p>
+<p><em>这里要进行注解的是，有的教程会让配置SSH密钥，SSH密钥可以为了防止其他人恶意部署文件到你的仓库，使用以后每次部署文件都需要登录Github账号，可以不配置。<br>有的教程中还会要求下载Github客户端，但我觉得没什么卵用。</em></p>
 <hr>
-<p>###<strong>0x02 曲折的路和路上的坑</strong></p>
-<p>路很长，慢慢来。</p>
-<ul>
-<li><strong>仓库的名字</strong><br>仓库的名字的正确格式是<code>github用户名.github.io</code>,之前没仔细看，随便起了个，果断报错</li>
-<li><strong>关于Git</strong><br>Git是Git Bash不是Github更不是Github Shell，是一个命令行工具，长这个样子<img src="http://static.zybuluo.com/yiltoncent/24gb14ge265g74tlpmiq3gnt/2.png" alt="git-bash-image">我刚开始就搞错了，然后Hexo的安装就失败了。</li>
-<li><p><strong>Hexo本地测试的时候要注意：</strong><br>1.Git要运行在本地Hexo的根目录下。<br>2.Git中<code>Ctrl + C</code>是stop的快捷键，不要使用<code>Ctrl + C</code>或<code>Ctrl + V</code>的快捷键，用右键。<br>3.优化主题时，修改Hexo根目录下的<code>_config.yml</code>站点配置目录后，要重新启动Hexo再刷新，修改next主题目录下的<code>_config.yml</code>主题配置目录则只需刷新即可.<br>4.本地测试是<code>Hexo is running</code>,Git显示如下，其他状态便无法连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>如何绑定域名</strong><br>绑定域名是个大坑，我有两天的时间卡在了这上面，所以这里要详细讲一下绑定的过程<br>1.ping出Github Pages的IP，具体方法是打开win的命令行工具CMD，输入</p>
+<h1 id="曲折的路和路上的坑"><a href="#曲折的路和路上的坑" class="headerlink" title="曲折的路和路上的坑"></a>曲折的路和路上的坑</h1><p>路很长，慢慢来。</p>
+<h2 id="仓库的名字"><a href="#仓库的名字" class="headerlink" title="仓库的名字"></a>仓库的名字</h2><p>仓库的名字的正确格式是<code>github用户名.github.io</code>,之前没仔细看，随便起了个，果断报错。</p>
+<h2 id="关于Git"><a href="#关于Git" class="headerlink" title="关于Git"></a>关于Git</h2><p>Git是Git Bash不是Github更不是Github Shell，是一个命令行工具，长这个样子。<img src="http://static.zybuluo.com/yiltoncent/24gb14ge265g74tlpmiq3gnt/2.png" alt="git-bash-image">我刚开始就搞错了，然后Hexo的安装就失败了。</p>
+<h2 id="Hexo本地测试的时候要注意："><a href="#Hexo本地测试的时候要注意：" class="headerlink" title="Hexo本地测试的时候要注意："></a>Hexo本地测试的时候要注意：</h2><p>1.Git要运行在本地Hexo的根目录下。<br>2.Git中<code>Ctrl + C</code>是stop的快捷键，不要使用<code>Ctrl + C</code>或<code>Ctrl + V</code>的快捷键，用右键。<br>3.优化主题时，修改Hexo根目录下的<code>_config.yml</code>站点配置目录后，要重新启动Hexo再刷新，修改next主题目录下的<code>_config.yml</code>主题配置目录则只需刷新即可.<br>4.本地测试是<code>Hexo is running</code>,Git显示如下，其他状态便无法连接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
+<h2 id="如何绑定域名"><a href="#如何绑定域名" class="headerlink" title="如何绑定域名"></a>如何绑定域名</h2><p>绑定域名是个大坑，我有两天的时间卡在了这上面，所以这里要详细讲一下绑定的过程</p>
+<h3 id="ping出Github-Pages的IP"><a href="#ping出Github-Pages的IP" class="headerlink" title="ping出Github Pages的IP"></a>ping出Github Pages的IP</h3><p>具体方法是打开win的命令行工具CMD，输入</p>
 <blockquote>
 <p>ping yourname.github.io</p>
 </blockquote>
-<p>如图</p>
-<p><img src="http://niujiajun.com/images/ping.png" alt="ping"></p>
-<p>返回的<code>23.235.47.133</code>就是Github Pages的IP，我拿到这个IP后直接在浏览器输入，结果就是404<br><img src="http://niujiajun.com/images/ip-404.png" alt="ip-404"><br>我就很费解，为什么返回的ip找不到对象，然后我再次ping了一下<br><img src="http://niujiajun.com/images/ping-error.png" alt="ping-error"><br>WHAT THE FUCK？IP变成了<code>185.31.18.133</code>,是不是在玩我<br><img src="http://niujiajun.com/images/biaoqing1.jpg" alt="biaoqing1"><br>然后上网查教程，没错啊，就是这样啊，可为什么会出问题呢？然后就一直卡着，最后加了个Hexo群问了下，也没有人说出原因，根据后面的尝试觉得可能每个结果都是对的，也就是说<strong>填哪个都行</strong>。<br>2.把获取的IP绑定到域名上<br>上一步有点混乱，我也不知道该绑定哪个IP，只好先试一下。看了网上的教程，很多人在DNSpod去绑定，如<a href="http://jingyan.baidu.com/album/a3761b2bb8e72e1577f9aa4b.html" target="_blank" rel="external">继利用github创建自己的博客（二）—绑定域名</a>,我觉得在哪设置都行，就直接在阿里云的控制台设置了。<br>首先找到控制台–&gt;产品与服务–&gt;域名–&gt;域名列表<br><img src="http://niujiajun.com/images/aliyun.png" alt="aliyun"><br>在你要设置的域名中点击解析<br><img src="http://niujiajun.com/images/jiexi.png" alt="jiexi"><br>如果首次修改可以选择<code>新手引导设置</code>，不是首次就只能选择<code>修改</code>了，修改的时候只要修改两个记录类型为A，主机记录分别为<code>@</code>和<code>www</code>的行就可以了。<br><img src="http://niujiajun.com/images/dnsset.png" alt="dns-set"><br>新手引导设置只需修改网址解析<br><img src="http://niujiajun.com/images/new.png" alt="new"><br><em>PS：有的教程中说要新建CNAME,然后指向yourname.github.io,我试了，并不行，和已建的有冲突</em><br>好了，域名设置好了，在浏览器输入</p>
+<p> 如图</p>
+<p> <img src="http://niujiajun.com/images/ping.png" alt="ping"></p>
+<p> 返回的<code>23.235.47.133</code>就是Github Pages的IP，我拿到这个IP后直接在浏览器输入，结果就是404<br><img src="http://niujiajun.com/images/ip-404.png" alt="ip-404"><br>我就很费解，为什么返回的ip找不到对象，然后我再次ping了一下<br><img src="http://niujiajun.com/images/ping-error.png" alt="ping-error"><br>WHAT THE FUCK？IP变成了<code>185.31.18.133</code>,是不是在玩我<br><img src="http://niujiajun.com/images/biaoqing1.jpg" alt="biaoqing1"><br>然后上网查教程，没错啊，就是这样啊，可为什么会出问题呢？然后就一直卡着，最后加了个Hexo群问了下，也没有人说出原因，根据后面的尝试觉得可能每个结果都是对的，也就是说<strong>填哪个都行</strong>。</p>
+<h3 id="把获取的IP绑定到域名上"><a href="#把获取的IP绑定到域名上" class="headerlink" title="把获取的IP绑定到域名上"></a>把获取的IP绑定到域名上</h3><p>上一步有点混乱，我也不知道该绑定哪个IP，只好先试一下。看了网上的教程，很多人在DNSpod去绑定，如<a href="http://jingyan.baidu.com/album/a3761b2bb8e72e1577f9aa4b.html" target="_blank" rel="external">继利用github创建自己的博客（二）—绑定域名</a>,我觉得在哪设置都行，就直接在阿里云的控制台设置了。<br>首先找到控制台–&gt;产品与服务–&gt;域名–&gt;域名列表<br><img src="http://niujiajun.com/images/aliyun.png" alt="aliyun"><br>在你要设置的域名中点击解析<br><img src="http://niujiajun.com/images/jiexi.png" alt="jiexi"><br>如果首次修改可以选择<code>新手引导设置</code>，不是首次就只能选择<code>修改</code>了，修改的时候只要修改两个记录类型为A，主机记录分别为<code>@</code>和<code>www</code>的行就可以了。<br><img src="http://niujiajun.com/images/dnsset.png" alt="dns-set"><br>新手引导设置只需修改网址解析<br><img src="http://niujiajun.com/images/new.png" alt="new"><br><em>PS：有的教程中说要新建CNAME,然后指向yourname.github.io,我试了，并不行，和已建的有冲突</em><br>好了，域名设置好了，在浏览器输入</p>
 <blockquote>
 <p>niujiajun.com</p>
 </blockquote>
-<p>好了，接下来就是见证奇迹的时刻了<br><img src="http://niujiajun.com/images/404.png" alt="404"><br>excuse me?怎么还是404，到底是哪出了问题，然后我又ping了一次拿新的ip绑定还是404，重新部署了文件直接无法显示网页了，重新申请个Github账号，然后重新绑定，还是404。<br><img src="http://niujiajun.com/images/biaoqing2.jpg" alt="biaoqing2"><br>搞了很久还是不行，后面在网上和群里问出，到这里域名绑定并没有结束，还差关键一步。<br>3.在yourname.github.io的根目录下添加CNAME<br>具体就是在Hexo目录里的source文件下添加一个名为<code>CNAME</code>的文件，注意<strong>这个文件是没有后缀的，千万不要设置成.txt文本文件</strong>，文件的内容就是域名，格式如：</p>
+<p> 好了，接下来就是见证奇迹的时刻了<br> <img src="http://niujiajun.com/images/404.png" alt="404"><br> excuse me?怎么还是404，到底是哪出了问题，然后我又ping了一次拿新的ip绑定还是404，重新部署了文件直接无法显示网页了，重新申请个Github账号，然后重新绑定，还是404。<br>  <img src="http://niujiajun.com/images/biaoqing2.jpg" alt="biaoqing2"><br>  搞了很久还是不行，后面在网上和群里问出，到这里域名绑定并没有结束，还差关键一步。</p>
+<h3 id="在yourname-github-io的根目录下添加CNAME"><a href="#在yourname-github-io的根目录下添加CNAME" class="headerlink" title="在yourname.github.io的根目录下添加CNAME"></a>在yourname.github.io的根目录下添加CNAME</h3><p>  具体就是在Hexo目录里的source文件下添加一个名为<code>CNAME</code>的文件，注意<strong>这个文件是没有后缀的，千万不要设置成.txt文本文件</strong>，文件的内容就是域名，格式如：</p>
 <blockquote>
 <p>niujiajun.com</p>
 </blockquote>
-<p>添加后部署文件，这个时候再试，应该就成功了。<br><img src="http://niujiajun.com/images/biaoqing3.jpg" alt="biaoqing3"><br>其他步骤就按教程就行了。</p>
-</li>
-<li><strong>搜索引擎推广时的注意</strong><br>1.HTML验证文件<br>下载了验证文件后，部署到根目录下，点击完成验证，却发现<br><img src="http://niujiajun.com/images/baidu.png" alt="baidu"><br><img src="http://niujiajun.com/images/google.png" alt="google"><br>这是因为hexo编译文件时，会给下载的HTML文件中添加其他的内容，导致验证失败。<br>比如本机内google文件的原内容是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google-site-verification: google28a167413f7cb18a.html</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
+<p>  添加后部署文件，这个时候再试，应该就成功了。<br>  <img src="http://niujiajun.com/images/biaoqing3.jpg" alt="biaoqing3"><br>  其他步骤就按教程就行了。</p>
+<h2 id="搜索引擎推广时的注意"><a href="#搜索引擎推广时的注意" class="headerlink" title="搜索引擎推广时的注意"></a>搜索引擎推广时的注意</h2><h3 id="HTML验证文件"><a href="#HTML验证文件" class="headerlink" title="HTML验证文件"></a>HTML验证文件</h3><p>下载了验证文件后，部署到根目录下，点击完成验证，却发现<br><img src="http://niujiajun.com/images/baidu.png" alt="baidu"><br><img src="http://niujiajun.com/images/google.png" alt="google"><br>这是因为hexo编译文件时，会给下载的HTML文件中添加其他的内容，导致验证失败。<br>比如本机内google文件的原内容是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google-site-verification: google28a167413f7cb18a.html</span><br></pre></td></tr></table></figure></p>
 <p>Github里google文件的内容却是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;html class=&quot;theme-next mist use-motion&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;/&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;/&gt;</span><br><span class="line"></span><br><span class="line">......</span><br></pre></td></tr></table></figure></p>
 <p>等等一大堆，所以需要在Github里手动修改验证HTML文件，或者不编译，只需执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo c</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
-<p>打开HTML文件只有一串字符<br><img src="http://niujiajun.com/images/yanzheng.png" alt="yanzheng"><br>2.提交sitemap站点地图<br>教程中说需要在在博客目录的<code>_config.yml</code>中添加如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">path: baidusitemap.xml</span><br></pre></td></tr></table></figure></p>
+<p>打开HTML文件只有一串字符<br><img src="http://niujiajun.com/images/yanzheng.png" alt="yanzheng"></p>
+<h3 id="提交sitemap站点地图"><a href="#提交sitemap站点地图" class="headerlink" title="提交sitemap站点地图"></a>提交sitemap站点地图</h3><p>教程中说需要在在博客目录的<code>_config.yml</code>中添加如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">path: baidusitemap.xml</span><br></pre></td></tr></table></figure></p>
 <p>然后编译，就会在博客根目录的<code>public</code>下面发现生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>。但我的情况是，不添加可以生成，添加后反而不能生成。<br>然后，我生成的文件如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;url&gt;</span><br><span class="line">    &lt;loc&gt;http://yoursite.com/2016/04/13/hello-world/&lt;/loc&gt;</span><br><span class="line">    &lt;lastmod&gt;2016-04-16T07:39:13.917Z&lt;/lastmod&gt;</span><br><span class="line">    &lt;data&gt;</span><br><span class="line">        &lt;display&gt;</span><br><span class="line">        &lt;title&gt;Hello World&lt;/title&gt;</span><br><span class="line">        &lt;pubTime&gt;2016-04-13T07:00:20.947Z&lt;/pubTime&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/display&gt;</span><br><span class="line">    &lt;/data&gt;</span><br><span class="line">    &lt;/url&gt;</span><br><span class="line">&lt;/urlset&gt;</span><br></pre></td></tr></table></figure></p>
 <p>可以看到，编译器并没有把<code>yoursite.com</code>改为<code>niujiajun.com</code>,这里需要手动修改，但有一点要注意的是<strong>修改后部署文件不能再编译（hexo g）了，因为编译了以后又会变回<code>yoursite.com</code></strong>，所以写了新的文章后记得修改sitemap.xml。<br>然后把sitemap文件提交给搜索引擎就行了。</p>
+<h1 id="一些补充"><a href="#一些补充" class="headerlink" title="一些补充"></a>一些补充</h1><h2 id="hexo-命令"><a href="#hexo-命令" class="headerlink" title="hexo 命令"></a>hexo 命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</span><br><span class="line">hexo deploy #将.deploy目录部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line">hexo deploy -g  #生成加部署</span><br><span class="line">hexo server -g  #生成加预览</span><br><span class="line">命令的简写</span><br><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
+<p>部署文件需要三步<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo c</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>有时不需要hexo g</p>
+<h2 id="设置题目、分类、标签"><a href="#设置题目、分类、标签" class="headerlink" title="设置题目、分类、标签"></a>设置题目、分类、标签</h2><p>在Markdown文件的开头添加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: 你的题目</span><br><span class="line">tags: 你的标签</span><br><span class="line">category: 你的分类</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意要以—结尾</strong></p>
+<p>标签好像都只能添加一个，用逗号和空格分隔都不行，分类也是</p>
+<h2 id="设置索引目录里的图片"><a href="#设置索引目录里的图片" class="headerlink" title="设置索引目录里的图片"></a>设置索引目录里的图片</h2><p>因为索引设置为提取文档前150个字符，所以想在索引目录中插入图片，就在文章开头插入图片即可。</p>
 <hr>
 <p>回看一下好像也没什么难的，一步步按着教程来就可以了，有什么不懂的网上查一下就OK了。</p>
 <p>end</p>
@@ -515,6 +542,12 @@ $(function() {
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+        </div>
       
 
       
@@ -613,7 +646,21 @@ $(function() {
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -661,7 +708,7 @@ $(function() {
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#不简单的介绍"><span class="nav-number">1.</span> <span class="nav-text">不简单的介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建博客的准备"><span class="nav-number">2.</span> <span class="nav-text">搭建博客的准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#曲折的路和路上的坑"><span class="nav-number">3.</span> <span class="nav-text">曲折的路和路上的坑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#仓库的名字"><span class="nav-number">3.1.</span> <span class="nav-text">仓库的名字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于Git"><span class="nav-number">3.2.</span> <span class="nav-text">关于Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo本地测试的时候要注意："><span class="nav-number">3.3.</span> <span class="nav-text">Hexo本地测试的时候要注意：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何绑定域名"><span class="nav-number">3.4.</span> <span class="nav-text">如何绑定域名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ping出Github-Pages的IP"><span class="nav-number">3.4.1.</span> <span class="nav-text">ping出Github Pages的IP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#把获取的IP绑定到域名上"><span class="nav-number">3.4.2.</span> <span class="nav-text">把获取的IP绑定到域名上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在yourname-github-io的根目录下添加CNAME"><span class="nav-number">3.4.3.</span> <span class="nav-text">在yourname.github.io的根目录下添加CNAME</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索引擎推广时的注意"><span class="nav-number">3.5.</span> <span class="nav-text">搜索引擎推广时的注意</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML验证文件"><span class="nav-number">3.5.1.</span> <span class="nav-text">HTML验证文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交sitemap站点地图"><span class="nav-number">3.5.2.</span> <span class="nav-text">提交sitemap站点地图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些补充"><span class="nav-number">4.</span> <span class="nav-text">一些补充</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-命令"><span class="nav-number">4.1.</span> <span class="nav-text">hexo 命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置题目、分类、标签"><span class="nav-number">4.2.</span> <span class="nav-text">设置题目、分类、标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置索引目录里的图片"><span class="nav-number">4.3.</span> <span class="nav-text">设置索引目录里的图片</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -679,7 +726,7 @@ $(function() {
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy;  2013 - 
+  &copy; 
   <span itemprop="copyrightYear">2016</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>

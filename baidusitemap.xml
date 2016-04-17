@@ -4,21 +4,24 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/04/17/problems-in-hexo-blog/</loc>
-    <lastmod>2016-04-17T07:49:50.423Z</lastmod>
+    <loc>http://niujiajun.com/2016/04/17/problems-in-hexo-blog/</loc>
+    <lastmod>2016-04-17T08:50:42.657Z</lastmod>
     <data>
         <display>
         <title>搭建Hexo博客中碰到的坑</title>
         <pubTime>2016-04-17T07:35:49.731Z</pubTime>
         
+        <tag>Hexo</tag>
+         
          
            
+             
+              <breadCrumb title="博客搭建" url="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
         </display>
     </data>
     </url>
 
-    
-    
     
     
 </urlset>
