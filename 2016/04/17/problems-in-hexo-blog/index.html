@@ -1,0 +1,930 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favico.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名niujiajun.com没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&amp;gt;说出来&amp;gt;想出来。
+
+###0x00 不简单的介绍好">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建Hexo博客中碰到的坑">
+<meta property="og:url" content="http://yoursite.com/2016/04/17/problems-in-hexo-blog/index.html">
+<meta property="og:site_name" content="小牛的博客">
+<meta property="og:description" content="前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名niujiajun.com没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&amp;gt;说出来&amp;gt;想出来。
+
+###0x00 不简单的介绍好">
+<meta property="og:image" content="http://static.zybuluo.com/yiltoncent/24gb14ge265g74tlpmiq3gnt/2.png">
+<meta property="og:image" content="http://niujiajun.com/images/ping.png">
+<meta property="og:image" content="http://niujiajun.com/images/ip-404.png">
+<meta property="og:image" content="http://niujiajun.com/images/ping-error.png">
+<meta property="og:image" content="http://niujiajun.com/images/biaoqing1.jpg">
+<meta property="og:image" content="http://niujiajun.com/images/aliyun.png">
+<meta property="og:image" content="http://niujiajun.com/images/jiexi.png">
+<meta property="og:image" content="http://niujiajun.com/images/dnsset.png">
+<meta property="og:image" content="http://niujiajun.com/images/new.png">
+<meta property="og:image" content="http://niujiajun.com/images/404.png">
+<meta property="og:image" content="http://niujiajun.com/images/biaoqing2.png">
+<meta property="og:image" content="http://niujiajun.com/images/biaoqing3.jpg">
+<meta property="og:image" content="http://niujiajun.com/images/baidu.png">
+<meta property="og:image" content="http://niujiajun.com/images/google.png">
+<meta property="og:image" content="http://niujiajun.com/images/yanzheng.png">
+<meta property="og:updated_time" content="2016-04-17T07:35:50.752Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建Hexo博客中碰到的坑">
+<meta name="twitter:description" content="前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名niujiajun.com没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&amp;gt;说出来&amp;gt;想出来。
+
+###0x00 不简单的介绍好">
+<meta name="twitter:image" content="http://static.zybuluo.com/yiltoncent/24gb14ge265g74tlpmiq3gnt/2.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6273747008482182000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 搭建Hexo博客中碰到的坑 | 小牛的博客 </title>
+</head>
+
+
+  	 <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("rk1g6SMHjihkc91LeztBMEds-gzGzoHsz", "Jo2C9gz7OeLrBDlGK1IwlU7U");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = $(document.getElementById(url)).text() + ': 0';
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?91540d4bebff2d97ac5c297856d63ce5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小牛的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="st-search-show-outputs">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'qsPpvxeZezyKvU8EtsdL','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                搭建Hexo博客中碰到的坑
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-17T15:35:49+08:00" content="2016-04-17">
+              2016-04-17
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/17/problems-in-hexo-blog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/17/problems-in-hexo-blog/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/04/17/problems-in-hexo-blog/" class="leancloud_visitors" data-flag-title="搭建Hexo博客中碰到的坑">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>前段时间上网查资料时看到了好几个很不错的个人博客，感觉很棒，自己也想搭建一个玩一下，刚好在万网查到自己的域名<code>niujiajun.com</code>没被注册，就搜集资料准备开干了。虽然现在早就不再是博客的时代了，但本来也没想着靠这个干什么，只是说能有个专属自己地方能分享记录自己的思考，资源和学习成果，可以把琐碎的东西总结归纳然后写出来，毕竟写出来&gt;说出来&gt;想出来。</p>
+</blockquote>
+<p>###<strong>0x00 不简单的介绍</strong><br>好了费话不多说了，开始复盘博客搭建的整个过程。首先简单介绍一下，我的博客由<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo</a>作为博客框架，<a href="https://github.com/" target="_blank" rel="external">Github</a>提供的300M免费空间作为服务器，<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next</a>作为博客的主题。Next主题中又集成了<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>的评论、分享系统和热评文章功能，<a href="http://tongji.baidu.com/web/welcome/login" target="_blank" rel="external">百度统计</a>服务和<a href="https://swiftype.com/" target="_blank" rel="external">Swiftype</a>站内搜索服务。<br>反正就是一锅乱炖吧，其实我也不太了解这些功能和服务，就一步步按教程走就好了。整个搭建耗时4天，其实1天就能把基本的东西搭建好，剩下的三天都在处理问题和完善细节。如题，这篇文章的目的并不是讲解如何搭建一个Hexo博客，而是记录我在搭建博客过程中遇到的问题，并给出我的解决方法。</p>
+<p>###<strong>0x01 搭建博客的准备</strong><br>先放几个Windows环境下搭建Hexo博客的教程：</p>
+<ul>
+<li><a href="http://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html" target="_blank" rel="external">史上最详细“截图”搭建Hexo博客并部署到Github</a></li>
+<li><a href="http://sunwhut.com/2015/10/30/buildBlog/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="external">如何利用GitHub Pages和Hexo快速搭建个人博客</a> </li>
+<li><a href="http://www.jianshu.com/p/ba76165ca84d" target="_blank" rel="external">hexo干货系列：（一）hexo+gitHub搭建个人独立博客</a></li>
+<li><a href="http://blog.csdn.net/renfufei/article/details/37725057" target="_blank" rel="external">创建GitHub技术博客全攻略</a></li>
+<li><a href="http://huangnx.com/2016/03/17/BlogPlatByHexoAndGithub/" target="_blank" rel="external">使用hexo在github上搭建独立博客</a></li>
+<li><a href="http://www.cnblogs.com/zhcncn/p/4097881.html" target="_blank" rel="external">Hexo搭建Github静态博客</a></li>
+<li><a href="http://huangnx.com/2016/04/01/blogForSearch/" target="_blank" rel="external">Hexo搭建博客之博客搜索引擎推广</a></li>
+</ul>
+<p>这类教程网上一搜一大把，这里给的是我觉得写得可以的。还有一个比较作弊一些的自动化搭建工具：</p>
+<ul>
+<li><a href="https://project.bitmoe.cn/PortableHexo/" target="_blank" rel="external">HEXO 便携版</a></li>
+</ul>
+<p>这个是我快搭好的时候发现的，不喜欢太傻瓜式的，且不想前功尽弃，所以我是没用过的，疗效如何我也不知道。<br>然后如果每个教程都大概看一下的话，可以发现每个教程的步骤不太一样，这就很讨厌了。其实上上周我就尝试过搭建，就是因为看的教程不对，所以刚开始就碰到了问题，于是放弃，拖了两周又重头再来。可见一个好的教程是成功他妈，下面是我看了几篇教程后自己的步骤：</p>
+<blockquote>
+<ul>
+<li>注册github账号,创建一个yourname.github.io的仓库</li>
+<li>买个喜欢的域名</li>
+<li>下载<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>、<a href="https://git-scm.com/download" target="_blank" rel="external">Git</a></li>
+<li>利用Git安装Hexo，并进行本地测试</li>
+<li>部署本地文件到Github进行查看</li>
+<li>Github Pages绑定域名</li>
+<li>安装Next主题,并进行优化</li>
+<li>博客搜索引擎推广</li>
+</ul>
+</blockquote>
+<hr>
+<p>这里要进行注解的是，有的教程会让配置SSH密钥，SSH密钥可以为了防止其他人恶意部署文件到你的仓库，使用以后每次部署文件都需要登录Github账号，可以不配置。<br>有的教程中还会要求下载Github客户端，但我觉得没什么卵用。</p>
+<hr>
+<p>###<strong>0x02 曲折的路和路上的坑</strong></p>
+<p>路很长，慢慢来。</p>
+<ul>
+<li><strong>仓库的名字</strong><br>仓库的名字的正确格式是<code>github用户名.github.io</code>,之前没仔细看，随便起了个，果断报错</li>
+<li><strong>关于Git</strong><br>Git是Git Bash不是Github更不是Github Shell，是一个命令行工具，长这个样子<img src="http://static.zybuluo.com/yiltoncent/24gb14ge265g74tlpmiq3gnt/2.png" alt="git-bash-image">我刚开始就搞错了，然后Hexo的安装就失败了。</li>
+<li><p><strong>Hexo本地测试的时候要注意：</strong><br>1.Git要运行在本地Hexo的根目录下。<br>2.Git中<code>Ctrl + C</code>是stop的快捷键，不要使用<code>Ctrl + C</code>或<code>Ctrl + V</code>的快捷键，用右键。<br>3.优化主题时，修改Hexo根目录下的<code>_config.yml</code>站点配置目录后，要重新启动Hexo再刷新，修改next主题目录下的<code>_config.yml</code>主题配置目录则只需刷新即可.<br>4.本地测试是<code>Hexo is running</code>,Git显示如下，其他状态便无法连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>如何绑定域名</strong><br>绑定域名是个大坑，我有两天的时间卡在了这上面，所以这里要详细讲一下绑定的过程<br>1.ping出Github Pages的IP，具体方法是打开win的命令行工具CMD，输入</p>
+<blockquote>
+<p>ping yourname.github.io</p>
+</blockquote>
+<p>如图</p>
+<p><img src="http://niujiajun.com/images/ping.png" alt="ping"></p>
+<p>返回的<code>23.235.47.133</code>就是Github Pages的IP，我拿到这个IP后直接在浏览器输入，结果就是404<br><img src="http://niujiajun.com/images/ip-404.png" alt="ip-404"><br>我就很费解，为什么返回的ip找不到对象，然后我再次ping了一下<br><img src="http://niujiajun.com/images/ping-error.png" alt="ping-error"><br>WHAT THE FUCK？IP变成了<code>185.31.18.133</code>,是不是在玩我<br><img src="http://niujiajun.com/images/biaoqing1.jpg" alt="biaoqing1"><br>然后上网查教程，没错啊，就是这样啊，可为什么会出问题呢？然后就一直卡着，最后加了个Hexo群问了下，也没有人说出原因，根据后面的尝试觉得可能每个结果都是对的，也就是说<strong>填哪个都行</strong>。<br>2.把获取的IP绑定到域名上<br>上一步有点混乱，我也不知道该绑定哪个IP，只好先试一下。看了网上的教程，很多人在DNSpod去绑定，如<a href="http://jingyan.baidu.com/album/a3761b2bb8e72e1577f9aa4b.html" target="_blank" rel="external">继利用github创建自己的博客（二）—绑定域名</a>,我觉得在哪设置都行，就直接在阿里云的控制台设置了。<br>首先找到控制台–&gt;产品与服务–&gt;域名–&gt;域名列表<br><img src="http://niujiajun.com/images/aliyun.png" alt="aliyun"><br>在你要设置的域名中点击解析<br><img src="http://niujiajun.com/images/jiexi.png" alt="jiexi"><br>如果首次修改可以选择<code>新手引导设置</code>，不是首次就只能选择<code>修改</code>了，修改的时候只要修改两个记录类型为A，主机记录分别为<code>@</code>和<code>www</code>的行就可以了。<br><img src="http://niujiajun.com/images/dnsset.png" alt="dns-set"><br>新手引导设置只需修改网址解析<br><img src="http://niujiajun.com/images/new.png" alt="new"><br><em>PS：有的教程中说要新建CNAME,然后指向yourname.github.io,我试了，并不行，和已建的有冲突</em><br>好了，域名设置好了，在浏览器输入</p>
+<blockquote>
+<p>niujiajun.com</p>
+</blockquote>
+<p>好了，接下来就是见证奇迹的时刻了<br><img src="http://niujiajun.com/images/404.png" alt="404"><br>excuse me?怎么还是404，到底是哪出了问题，然后我又ping了一次拿新的ip绑定还是404，重新部署了文件直接无法显示网页了，重新申请个Github账号，然后重新绑定，还是404。<br><img src="http://niujiajun.com/images/biaoqing2.png" alt="biaoqing2"><br>搞了很久还是不行，后面在网上和群里问出，到这里域名绑定并没有结束，还差关键一步。<br>3.在yourname.github.io的根目录下添加CNAME<br>具体就是在Hexo目录里的source文件下添加一个名为<code>CNAME</code>的文件，注意<strong>这个文件是没有后缀的，千万不要设置成.txt文本文件</strong>，文件的内容就是域名，格式如：</p>
+<blockquote>
+<p>niujiajun.com</p>
+</blockquote>
+<p>添加后部署文件，这个时候再试，应该就成功了。<br><img src="http://niujiajun.com/images/biaoqing3.jpg" alt="biaoqing3"><br>其他步骤就按教程就行了。</p>
+</li>
+<li><strong>搜索引擎推广时的注意</strong><br>1.HTML验证文件<br>下载了验证文件后，部署到根目录下，点击完成验证，却发现<br><img src="http://niujiajun.com/images/baidu.png" alt="baidu"><br><img src="http://niujiajun.com/images/google.png" alt="google"><br>这是因为hexo编译文件时，会给下载的HTML文件中添加其他的内容，导致验证失败。<br>比如本机内google文件的原内容是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google-site-verification: google28a167413f7cb18a.html</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Github里google文件的内容却是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;html class=&quot;theme-next mist use-motion&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;/&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</span><br><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;/&gt;</span><br><span class="line"></span><br><span class="line">......</span><br></pre></td></tr></table></figure></p>
+<p>等等一大堆，所以需要在Github里手动修改验证HTML文件，或者不编译，只需执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo c</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p>打开HTML文件只有一串字符<br><img src="http://niujiajun.com/images/yanzheng.png" alt="yanzheng"><br>2.提交sitemap站点地图<br>教程中说需要在在博客目录的<code>_config.yml</code>中添加如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 自动生成sitemap</span><br><span class="line">sitemap:</span><br><span class="line">path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">path: baidusitemap.xml</span><br></pre></td></tr></table></figure></p>
+<p>然后编译，就会在博客根目录的<code>public</code>下面发现生成了<code>sitemap.xml</code>以及<code>baidusitemap.xml</code>。但我的情况是，不添加可以生成，添加后反而不能生成。<br>然后，我生成的文件如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;url&gt;</span><br><span class="line">    &lt;loc&gt;http://yoursite.com/2016/04/13/hello-world/&lt;/loc&gt;</span><br><span class="line">    &lt;lastmod&gt;2016-04-16T07:39:13.917Z&lt;/lastmod&gt;</span><br><span class="line">    &lt;data&gt;</span><br><span class="line">        &lt;display&gt;</span><br><span class="line">        &lt;title&gt;Hello World&lt;/title&gt;</span><br><span class="line">        &lt;pubTime&gt;2016-04-13T07:00:20.947Z&lt;/pubTime&gt;</span><br><span class="line"></span><br><span class="line">        &lt;/display&gt;</span><br><span class="line">    &lt;/data&gt;</span><br><span class="line">    &lt;/url&gt;</span><br><span class="line">&lt;/urlset&gt;</span><br></pre></td></tr></table></figure></p>
+<p>可以看到，编译器并没有把<code>yoursite.com</code>改为<code>niujiajun.com</code>,这里需要手动修改，但有一点要注意的是<strong>修改后部署文件不能再编译（hexo g）了，因为编译了以后又会变回<code>yoursite.com</code></strong>，所以写了新的文章后记得修改sitemap.xml。<br>然后把sitemap文件提交给搜索引擎就行了。</p>
+<hr>
+<p>回看一下好像也没什么难的，一步步按着教程来就可以了，有什么不懂的网上查一下就OK了。</p>
+<p>end</p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/13/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/04/17/problems-in-hexo-blog/"
+     data-title="搭建Hexo博客中碰到的坑"
+     data-content=""
+     data-url="http://yoursite.com/2016/04/17/problems-in-hexo-blog/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/17/problems-in-hexo-blog/"
+           data-title="搭建Hexo博客中碰到的坑" data-url="http://yoursite.com/2016/04/17/problems-in-hexo-blog/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="小牛" />
+          <p class="site-author-name" itemprop="name">小牛</p>
+          <p class="site-description motion-element" itemprop="description">人的一切痛苦，本质上都是对自己无能的愤怒</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/3474130802" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  weibo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/niu-jia-jun" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小牛</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xiaoniu-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("rk1g6SMHjihkc91LeztBMEds-gzGzoHsz", "Jo2C9gz7OeLrBDlGK1IwlU7U");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>

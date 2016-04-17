@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/04/16/%E6%AC%A2%E8%BF%8E%E4%BD%BF%E7%94%A8%20Cmd%20Markdown%20%E7%BC%96%E8%BE%91%E9%98%85%E8%AF%BB%E5%99%A8/</loc>
-    <lastmod>2016-04-16T07:40:04.370Z</lastmod>
+    <loc>http://yoursite.com/2016/04/17/problems-in-hexo-blog/</loc>
+    <lastmod>2016-04-17T07:35:50.752Z</lastmod>
     <data>
         <display>
-        <title>Markdown语法手册</title>
-        <pubTime>2016-04-16T07:24:14.995Z</pubTime>
+        <title>搭建Hexo博客中碰到的坑</title>
+        <pubTime>2016-04-17T07:35:49.731Z</pubTime>
         
          
            
@@ -17,6 +17,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://yoursite.com/2016/04/13/hello-world/</loc>
@@ -32,7 +33,6 @@
     </data>
     </url>
 
-    
     
     
     
