@@ -4,7 +4,7 @@
 
     
   <url>
-    <loc>http://niujiajun.com.com/2016/04/17/problems-in-hexo-blog/</loc>
+    <loc>http://yoursite.com/2016/04/17/problems-in-hexo-blog/</loc>
     <lastmod>2016-04-18T13:52:17.921Z</lastmod>
     <data>
         <display>
@@ -16,7 +16,7 @@
          
            
              
-              <breadCrumb title="博客搭建" url="http://niujiajun.com.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+              <breadCrumb title="博客搭建" url="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
           
         </display>
     </data>
@@ -24,7 +24,7 @@
 
     
   <url>
-    <loc>http://niujiajun.com.com/2016/04/18/winXP-in-VM/</loc>
+    <loc>http://yoursite.com/2016/04/18/winXP-in-VM/</loc>
     <lastmod>2016-04-18T13:36:09.976Z</lastmod>
     <data>
         <display>
