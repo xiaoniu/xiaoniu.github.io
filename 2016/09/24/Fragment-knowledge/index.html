@@ -1,0 +1,923 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Android,笔试面经," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favico.png?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="概念Fragment英文原意是碎片，片段的意思，为了应对android的碎片化，Fragmnet的概念在Android3.0中被引入进来，主要目的是用在大屏幕设备上–例如平板电脑上，支持更加动态和灵活的UI设计。平板电脑的屏幕比手机大得多，有更多的空间来放更多的UI组件，并且这些组件之间会产生更多的交互。Fragment在应用中应当是一个模块化和可重用的组件，因为Fragment定义了自己的布局，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android开发工程师面试指南pdf版">
+<meta property="og:url" content="http://yoursite.com/2016/09/24/Fragment-knowledge/index.html">
+<meta property="og:site_name" content="小牛的博客">
+<meta property="og:description" content="概念Fragment英文原意是碎片，片段的意思，为了应对android的碎片化，Fragmnet的概念在Android3.0中被引入进来，主要目的是用在大屏幕设备上–例如平板电脑上，支持更加动态和灵活的UI设计。平板电脑的屏幕比手机大得多，有更多的空间来放更多的UI组件，并且这些组件之间会产生更多的交互。Fragment在应用中应当是一个模块化和可重用的组件，因为Fragment定义了自己的布局，">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1849253-f69744f4f7c5b6e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1849253-d04e9985b49f1db7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1849253-e910054cdaa52240.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-09-24T06:58:41.484Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android开发工程师面试指南pdf版">
+<meta name="twitter:description" content="概念Fragment英文原意是碎片，片段的意思，为了应对android的碎片化，Fragmnet的概念在Android3.0中被引入进来，主要目的是用在大屏幕设备上–例如平板电脑上，支持更加动态和灵活的UI设计。平板电脑的屏幕比手机大得多，有更多的空间来放更多的UI组件，并且这些组件之间会产生更多的交互。Fragment在应用中应当是一个模块化和可重用的组件，因为Fragment定义了自己的布局，">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1849253-f69744f4f7c5b6e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"hide"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6273747008482182000,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Android开发工程师面试指南pdf版 | 小牛的博客 </title>
+</head>
+
+
+  	 <!-- custom analytics part create by xiamo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("rk1g6SMHjihkc91LeztBMEds-gzGzoHsz", "Jo2C9gz7OeLrBDlGK1IwlU7U");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = $(document.getElementById(url)).text() + ': 0';
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?91540d4bebff2d97ac5c297856d63ce5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">小牛的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Android开发工程师面试指南pdf版
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-24T13:18:03+08:00" content="2016-09-24">
+              2016-09-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/24/Fragment-knowledge/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/24/Fragment-knowledge/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/09/24/Fragment-knowledge/" class="leancloud_visitors" data-flag-title="Android开发工程师面试指南pdf版">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Fragment英文原意是碎片，片段的意思，为了应对android的碎片化，Fragmnet的概念在Android3.0中被引入进来，主要目的是用在大屏幕设备上–例如平板电脑上，支持更加动态和灵活的UI设计。平板电脑的屏幕比手机大得多，有更多的空间来放更多的UI组件，并且这些组件之间会产生更多的交互。<br>Fragment在应用中应当是一个模块化和可重用的组件，因为Fragment定义了自己的布局，以及通过使用它自己的生命周期回调方法定义了它自己的行为，你可以将Fragment包含到多个Activity中，一个Activiy也可以包含多个Fragment。</p>
+<p>下面这张图可以帮助理解Fragment的概念：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1849253-f69744f4f7c5b6e7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="知识概要"><a href="#知识概要" class="headerlink" title="知识概要"></a>知识概要</h2><ol>
+<li>Fragment可以作为Activity界面的一部分组成出现</li>
+<li>可以在一个Activity中同时出现多个Fragment，并且一个Fragment也可以在多个Activity中使用</li>
+<li>在Activity运行过程中，可以添加，移除或替换Fragment</li>
+<li>Fragment可以响应自己的输入时间，并且有自己的生命周期，其生命周期受宿主Activity的生命周期影响</li>
+</ol>
+<h1 id="Fragment的使用"><a href="#Fragment的使用" class="headerlink" title="Fragment的使用"></a>Fragment的使用</h1><h2 id="创建Fragment"><a href="#创建Fragment" class="headerlink" title="创建Fragment"></a>创建Fragment</h2><h3 id="静态创建"><a href="#静态创建" class="headerlink" title="静态创建"></a>静态创建</h3><p>静态创建需要在在布局文件中声明Fragment，需要特别注意的是<strong>Fragment中的android：name属性指定了在layout中实例化的Fragment类 ,同时必须要标识Fragment。</strong></p>
+<p>标识Fragment的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">android：id 属性提供一个唯一的ID</span><br><span class="line">android：tag 属性提供一个唯一的字符串</span><br></pre></td></tr></table></figure></p>
+<p><strong> 创建方法：</strong></p>
+<ol>
+<li>在布局文件中声明一个fragment组件，name指向3中创建的类对象</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attr">xmlns:tools</span>=<span class="string">"http://schemas.android.com/tools"</span></span><br><span class="line">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span><br><span class="line">    <span class="attr">android:paddingBottom</span>=<span class="string">"@dimen/activity_vertical_margin"</span></span><br><span class="line">    <span class="attr">android:paddingLeft</span>=<span class="string">"@dimen/activity_horizontal_margin"</span></span><br><span class="line">    <span class="attr">android:paddingRight</span>=<span class="string">"@dimen/activity_horizontal_margin"</span></span><br><span class="line">    <span class="attr">android:paddingTop</span>=<span class="string">"@dimen/activity_vertical_margin"</span></span><br><span class="line">    <span class="attr">tools:context</span>=<span class="string">"com.w2.test.MainActivity"</span></span><br><span class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Button</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/button1"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:onClick</span>=<span class="string">"button1"</span></span><br><span class="line">        <span class="attr">android:text</span>=<span class="string">"Button1"</span></span><br><span class="line">        <span class="attr">android:textSize</span>=<span class="string">"18sp"</span></span><br><span class="line"></span><br><span class="line">        /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--声明一个fragment--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">fragment</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/fragment"</span></span><br><span class="line">        <span class="attr">android:name</span>=<span class="string">"com.w2.test.MyFragment"</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>2.创建fragment布局文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">LinearLayout</span> <span class="attr">xmlns:android</span>=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attr">android:orientation</span>=<span class="string">"vertical"</span> <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span><br><span class="line">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">TextView</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:text</span>=<span class="string">"这是一个静态加载的Fragment"</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/textView"</span></span><br><span class="line">        <span class="attr">android:layout_gravity</span>=<span class="string">"center_horizontal"</span></span><br><span class="line">        <span class="attr">android:textSize</span>=<span class="string">"20sp"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Button</span></span><br><span class="line">        <span class="attr">android:layout_width</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:layout_height</span>=<span class="string">"wrap_content"</span></span><br><span class="line">        <span class="attr">android:text</span>=<span class="string">"Change"</span></span><br><span class="line">        <span class="attr">android:id</span>=<span class="string">"@+id/button"</span></span><br><span class="line">        <span class="attr">android:layout_gravity</span>=<span class="string">"center_horizontal"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>3.创建MyFragment类继承Fragment对象，重写onCreateView方法返回布局文件的View</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyFragment</span> <span class="keyword">extends</span> <span class="title">Fragment</span></span>&#123;</span><br><span class="line">    <span class="meta">@Nullable</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span><br><span class="line">         * resource:Fragment需要加载的布局文件</span><br><span class="line">         * root：加载layout的父ViewGroup</span><br><span class="line">         * attactToRoot：false，不返回父ViewGroup</span><br><span class="line">         */</span></span><br><span class="line">        View v = inflater.inflate(R.layout.fragment,container,<span class="keyword">false</span>);</span><br><span class="line">        View view = inflater.inflate(R.layout.fragment, container, <span class="keyword">false</span>);</span><br><span class="line">        <span class="keyword">final</span> TextView text=(TextView) v.findViewById(R.id.textView);</span><br><span class="line">        Button button=(Button) v.findViewById(R.id.button);</span><br><span class="line">        button.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">                text.setText(<span class="string">"测试成功"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">return</span> v;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="动态创建"><a href="#动态创建" class="headerlink" title="动态创建"></a>动态创建</h3><p>在Java代码中撰写代码将Fragment添加到Activity layout中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add():添加一个Fragment，指定要添加的Fragment和插入的View</span><br></pre></td></tr></table></figure></p>
+<p>与此类似的还有remove(),repalce()等</p>
+<p>诸如上述对Fragment进行添加，移除，替换以及执行其他动作，提交给Activity的每一套变化被称为一个事物，处理这类事物需要Fragment Manager，通过FragmentManager开启事务。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FragmentManager fragmentManager = getFragmentManager();</span><br><span class="line">FragmentTransaction beginTransaction = fragmentManager.beginTransaction();</span><br></pre></td></tr></table></figure>
+<p>每一个事务都是同时执行一套变化，可以在一个事务中设置所要执行的操作，然后提交给Activity，之后必须要调用commit方法。</p>
+<p>如果允许用户通过按下BACK按键返回到前一个Fragment状态，调用commit之前可以加入addToBackStack()方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FragmentManager fragmentManager = getFragmentManager(); <span class="comment">//获取FragmentManager</span></span><br><span class="line">FragmentTransaction beginTransaction = fragmentManager.beginTransaction(); <span class="comment">//开启事务</span></span><br><span class="line">beginTransaction.add(R.id.frame, fragment2); <span class="comment">//添加Fragment，参数1containerViewId传入Fragment的父布局，参数2fragment穿入Fragment的实例化对象</span></span><br><span class="line">beginTransaction.addToBackStack(<span class="keyword">null</span>); <span class="comment">//增加回退功能，回到上一个事务状态</span></span><br><span class="line">beginTransaction.commit(); <span class="comment">//提交事务</span></span><br></pre></td></tr></table></figure>
+<h1 id="Fragment的生命周期"><a href="#Fragment的生命周期" class="headerlink" title="Fragment的生命周期"></a>Fragment的生命周期</h1><ul>
+<li><p>Fragment生命周期图<br><img src="http://upload-images.jianshu.io/upload_images/1849253-d04e9985b49f1db7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li><p>与Activity生命周期对比<br><img src="http://upload-images.jianshu.io/upload_images/1849253-e910054cdaa52240.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+</ul>
+<p>每个方法的回调条件：</p>
+<ul>
+<li><p><strong>onCreateView()</strong><br>每次创建都会绘制Fragment的View组件时回调该方法<br>Fragment第一次绘制它的用户界面的时候，系统会调用此方法，为了绘制Fragment的UI，此方法必须返回一个View，如果不显示UI，返回null即可。</p>
+</li>
+<li><p><strong>onAttach</strong><br>当Fragment被添加到Activity时候会回调这个方法，并且只调用一次</p>
+</li>
+<li><p><strong>onCreate</strong><br>创建Fragment时会回调，只会调用一次</p>
+</li>
+<li><p><strong>onActivityCreated</strong><br>当Fragment所在的Activty启动完成后调用</p>
+</li>
+<li><p><strong>onStart</strong><br>启动Fragment</p>
+</li>
+<li><p><strong>onResume</strong><br>恢复Fragment时会被回调，调用onStart（）方法后面一定会调用onResume()方法</p>
+</li>
+<li><p><strong>onPause</strong><br>暂停Fragment</p>
+</li>
+<li><p><strong>onStop</strong><br>停止Fragment</p>
+</li>
+<li><p><strong>onDestroyView</strong><br>销毁Fragment所包含的View组件时</p>
+</li>
+<li><p><strong>onDestroy</strong><br>销毁Fragment时会被回调</p>
+</li>
+<li><p><strong>onDetach</strong><br>Fragment从Activity中删除时会回调该方法，并且这个方法只会调用一次</p>
+</li>
+</ul>
+<h1 id="Fragment与Activity互相通信"><a href="#Fragment与Activity互相通信" class="headerlink" title="Fragment与Activity互相通信"></a>Fragment与Activity互相通信</h1><h2 id="Activity向Fragment传递数据"><a href="#Activity向Fragment传递数据" class="headerlink" title="Activity向Fragment传递数据"></a>Activity向Fragment传递数据</h2><p>在Activity中创建Bundle数据包，并调用Fragment的setArgument（Bundle bundle）方法。这种方式是在加载Fragment之前传递数据的。</p>
+<p>Activity：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//动态加载Fragment的同时传递数据</span></span><br><span class="line">String text = editText.getText().toString(); <span class="comment">//获取要传递的数据</span></span><br><span class="line">Bundle bundle = <span class="keyword">new</span> Bundle();</span><br><span class="line"><span class="keyword">if</span> (text!=<span class="keyword">null</span>)&#123;</span><br><span class="line">    bundle.putString(<span class="string">"msg"</span>,text);</span><br><span class="line">&#125;</span><br><span class="line">MyFragment fragment = <span class="keyword">new</span> MyFragment();</span><br><span class="line">fragment.setArguments(bundle);</span><br><span class="line">FragmentManager manager = getFragmentManager();</span><br><span class="line">FragmentTransaction transaction = manager.beginTransaction();</span><br><span class="line">transaction.add(R.id.frame,fragment,<span class="string">"MyFragment"</span>);</span><br><span class="line">transaction.addToBackStack(<span class="keyword">null</span>);</span><br><span class="line">transaction.commit();</span><br></pre></td></tr></table></figure></p>
+<p>Fragment：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取数据并令TextView显示</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        View v = inflater.inflate(R.layout.fragment,container,<span class="keyword">false</span>);</span><br><span class="line">        TextView text=(TextView) v.findViewById(R.id.textView);</span><br><span class="line">        text.setText(getArguments().get(<span class="string">"msg"</span>).toString());</span><br><span class="line">        <span class="keyword">return</span> v;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong> 注意，这里取得传递过来的数据用的是@getArgument方法，@setArgument中传入的bundle只是一个数据类型，与savedInstanceState这个参数没有关系。我之前用savedInstanceState.getString()获取数据一直错误，很久都找不到错误。</strong></p>
+<h2 id="Fragment向Activity传递数据"><a href="#Fragment向Activity传递数据" class="headerlink" title="Fragment向Activity传递数据"></a>Fragment向Activity传递数据</h2><p>需要在Fragment中定义回调接口，再让包含该Fragment的Activity实现该回调接口。这样Fragment可以调用该回调方法传数据给Activity。</p>
+<ul>
+<li>在Fragment中定义接口，并在接口中定义传递数据的抽象方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">MyListener</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">(String code)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>令Activity实现定义的接口，并重写定义的方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> <span class="keyword">implements</span> <span class="title">MyFragment</span>.<span class="title">MyListener</span></span><br><span class="line">...</span><br><span class="line">@<span class="title">Override</span></span><br><span class="line"><span class="title">public</span> <span class="title">void</span> <span class="title">send</span>(<span class="title">String</span> <span class="title">code</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在Fragment中将创建接口对象并指向Activity，最后传入String</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">MyListener listener;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onAttach</span><span class="params">(Activity activity)</span> </span>&#123; <span class="comment">//不一定非要在onAttach中</span></span><br><span class="line">    listener = (MyListener) activity;</span><br><span class="line">    <span class="keyword">super</span>.onAttach(activity);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> View <span class="title">onCreateView</span><span class="params">(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">    View v = inflater.inflate(R.layout.fragment,container,<span class="keyword">false</span>);</span><br><span class="line">    TextView text=(TextView) v.findViewById(R.id.textView);</span><br><span class="line">    text.setText(getArguments().get(<span class="string">"msg"</span>).toString());</span><br><span class="line">    listener.send(<span class="string">"这是发送给Activity的数据"</span>);<span class="comment">//也不一定非在onCreateView中</span></span><br><span class="line">    <span class="keyword">return</span> v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在Activity中接收数据</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">(String code)</span> </span>&#123;</span><br><span class="line">    editText.setText(code);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Activity向静态加载Fragment传递数据"><a href="#Activity向静态加载Fragment传递数据" class="headerlink" title="Activity向静态加载Fragment传递数据"></a>Activity向静态加载Fragment传递数据</h2><ul>
+<li><p>首先按静态加载方式创建Fragment</p>
+</li>
+<li><p>在Fragment的创建数据用来接收传来的数据，设置get和set方法</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String a;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getA</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setA</span><span class="params">(String a)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.a = a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在Activity通过Fragment.findFragmentById找到Fragment，通过set方法传递数据</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FragmentManager fragmentManager = getFragmentManager();</span><br><span class="line">MyFragment fragment = (MyFragment) fragmentManager.findFragmentById(R.id.fragment);</span><br><span class="line">fragment.setA(text);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>最后在Fragment中通过get方法接收数据</li>
+</ul>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag">#Android</a>
+          
+            <a href="/tags/笔试面经/" rel="tag">#笔试面经</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/16/Genymotion-Repair/" rel="next" title="Genymotion终于复活了">
+                <i class="fa fa-chevron-left"></i> Genymotion终于复活了
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/24/Android-guide-pdf/" rel="prev" title="Android开发工程师面试指南pdf版">
+                Android开发工程师面试指南pdf版 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/09/24/Fragment-knowledge/"
+     data-title="Android开发工程师面试指南pdf版"
+     data-content=""
+     data-url="http://yoursite.com/2016/09/24/Fragment-knowledge/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/24/Fragment-knowledge/"
+           data-title="Android开发工程师面试指南pdf版" data-url="http://yoursite.com/2016/09/24/Fragment-knowledge/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="小牛" />
+          <p class="site-author-name" itemprop="name">小牛</p>
+          <p class="site-description motion-element" itemprop="description">人的一切痛苦，本质上都是对自己无能的愤怒</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://niujiajun.com/wechat.html" target="_blank">
+                  
+                    <i class="fa fa-globe"></i>
+                  
+                  wechat
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#知识概要"><span class="nav-number">1.1.</span> <span class="nav-text">知识概要</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fragment的使用"><span class="nav-number">2.</span> <span class="nav-text">Fragment的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建Fragment"><span class="nav-number">2.1.</span> <span class="nav-text">创建Fragment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态创建"><span class="nav-number">2.1.1.</span> <span class="nav-text">静态创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态创建"><span class="nav-number">2.1.2.</span> <span class="nav-text">动态创建</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fragment的生命周期"><span class="nav-number">3.</span> <span class="nav-text">Fragment的生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fragment与Activity互相通信"><span class="nav-number">4.</span> <span class="nav-text">Fragment与Activity互相通信</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity向Fragment传递数据"><span class="nav-number">4.1.</span> <span class="nav-text">Activity向Fragment传递数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fragment向Activity传递数据"><span class="nav-number">4.2.</span> <span class="nav-text">Fragment向Activity传递数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity向静态加载Fragment传递数据"><span class="nav-number">4.3.</span> <span class="nav-text">Activity向静态加载Fragment传递数据</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小牛</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xiaoniu-notes"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("rk1g6SMHjihkc91LeztBMEds-gzGzoHsz", "Jo2C9gz7OeLrBDlGK1IwlU7U");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
