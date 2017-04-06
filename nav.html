@@ -1,10 +1,131 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>导航</title>
-</head>
+    <meta charset="UTF-8">
+	<title>导航</title>
+	<style type="text/css">
+    *{margin:0;
+     padding:0;
+     font-size:13px;
+     list-style:none;}
 
+.menu{width:310px;
+      margin:50px auto;
+      border:1px solid #ccc;}
+
+.menu p{height:25px;
+        line-height:25px;
+        font-weight:bold;
+        background:#eee;
+        border-bottom:1px solid #ccc;
+        cursor:pointer;
+        padding-left:5px;}
+
+.menu ul{display:none;}
+
+.menu li{height:24px;
+         line-height:24px;
+         padding-left:5px;}
+.menu li a {text-decoration:none;color:blue;}
+.menu li a:hover {text-decoration:none;color:red;}
+</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		
+      // 将所有点击的标题和要显示隐藏的列表取出来
+	  	var titles = document.getElementById("menu").getElementsByTagName("p");
+	  	var cons = document.getElementById("menu").getElementsByTagName("ul");
+
+     // 遍历所有要点击的标题且给它们添加索引及绑定事件
+	 	for(var i=0;i<titles.length;i++){
+			titles[i].index = i;
+			titles[i].onclick = function(){
+				cons[this.index].style.display = cons[this.index].style.display == "block"?"none":"block";
+			}
+		}
+     // 获取点击的标题上的索引属性，根据该索引找到对应的列表
+
+     // 判断该列表，如果是显示的则将其隐藏，如果是隐藏的则将其显示出来
+		
+	}
+	</script>
+</head>
 <body>
+	<div class="menu" id="menu">
+		<div>
+			<p>第一课（6）</p>
+			<ul>
+				<li><a href="html/1_1.html" target="_blank">控制Div属性</a></li>
+				<li><a href="html/1_2.html" target="_blank">网页换肤</a></li>
+				<li><a href="html/1_3.html" target="_blank">函数接收参数并弹出</a></li>
+				<li><a href="html/1_4.html" target="_blank">用循环将三个Div变成红色</a></li>
+				<li><a href="html/1_5.html" target="_blank">鼠标移入/移出改变样式</a></li>
+				<li><a href="html/1_6.html" target="_blank">记住密码提示框</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>第二课（12）</p>
+			<ul>
+				<li><a href="html/2_1.html" target="_blank">百度输入法（下拉列表）</a></li>
+				<li><a href="html/2_2.html" target="_blank">点击Div，显示其innerHTML</a></li>
+				<li><a href="html/2_3.html" target="_blank">求出数组中所有数字的和</a></li>
+				<li><a href="html/2_4.html" target="_blank">弹出层效果</a></li>
+				<li><a href="html/2_5.html" target="_blank">函数传参，改变Div任意属性的值</a></li>
+				<li><a href="html/2_6.html" target="_blank">图片列表：鼠标移入/移出改变图片的透明度</a></li>
+				<li><a href="html/2_7.html" target="_blank">简易选项卡</a></li>
+				<li><a href="html/2_8.html" target="_blank">简易JS年历</a></li>
+				<li><a href="html/2_9.html" target="_blank">单一按钮显示/隐藏一播放列表收缩展开</a></li>
+				<li><a href="html/2_10.html" target="_blank">提示框效果</a></li>
+				<li><a href="html/2_11.html" target="_blank">鼠标移过，修改图片路径</a></li>
+				<li><a href="html/2_12.html" target="_blank">复选框（checkbox）全选/全不选/反选</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>第三课（9）</p>
+			<ul>
+				<li><a href="html/3_1.html" target="_blank">用typeof查看数据类型</a></li>
+				<li><a href="html/3_2.html" target="_blank">用parseInt解析数字，并求和</a></li>
+				<li><a href="html/3_3.html" target="_blank">累加按钮，自加1</a></li>
+				<li><a href="html/3_4.html" target="_blank">输入两个数字，比较大小</a></li>
+				<li><a href="html/3_5.html" target="_blank">页面加载后累加，自加1</a></li>
+				<li><a href="html/3_6.html" target="_blank">判断数字是否为两位数</a></li>
+				<li><a href="html/3_7.html" target="_blank">简易网页时钟</a></li>
+				<li><a href="html/3_8.html" target="_blank">倒计时时钟（100秒）</a></li>
+				<li><a href="html/3_9.html" target="_blank">发送验证码（10秒）</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>第四课（8）</p>
+			<ul>
+				<li><a href="html/4_1.html" target="_blank">setTimeout应用</a></li>
+				<li><a href="html/4_2.html" target="_blank">自动播放一幻灯片效果</a></li>
+				<li><a href="html/4_3.html" target="_blank">自动改变方向一幻灯片效果</a></li>
+				<li><a href="html/4_4.html" target="_blank">agruments应用一求出函数参数的总合</a></li>
+				<li><a href="html/4_5.html" target="_blank">css函数一设置/读取对象的属性</a></li>
+				<li><a href="html/4_6.html" target="_blank">当前输入框高亮显示</a></li>
+				<li><a href="html/4_7.html" target="_blank">数组练习：各种数组方法的使用</a></li>
+				<li><a href="html/4_8.html" target="_blank">星级评分系统</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>第五课（8）</p>
+			<ul>
+				<li><a href="html/5_1.html" target="_blank">模拟select控件</a></li>
+				<li><a href="html/5_2.html" target="_blank">点击页面，显示单击的坐标</a></li>
+				<li><a href="html/5_3.html" target="_blank">用户按下键盘，显示keyCode</a></li>
+				<li><a href="html/5_4.html" target="_blank">阻止右键菜单（阻止默认事件）</a></li>
+				<li><a href="html/5_5.html" target="_blank">跟随鼠标移动（大图展示）</a></li>
+				<li><a href="html/5_6.html" target="_blank">自定义右键菜单</a></li>
+				<li><a href="html/5_7.html" target="_blank">用键盘控制Div</a></li>
+				<li><a href="html/5_8.html" target="_blank">Div闪烁</a></li>
+			</ul>
+		</div>
+		<div>
+			<p>第六课</p>
+			<ul>
+				<li><a href="html/6.html" target="_blank">地狗购物网（侧边导航栏）</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>
